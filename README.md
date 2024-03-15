@@ -25,26 +25,60 @@ The Histogram of gray scale image and color image is shown.
 
 
 ## Program:
-```python
-# Developed By: 
-# Register Number: 
 
-
-
-
-
-
+# Developed By: Kanishka V S
+# Register Number: 212222230061
+# Input Grayscale Image and Color Image:
+```py
+import cv2
+import matplotlib.pyplot as plt
+Gray_image = cv2.imread('tree.jpg')
+Color_image = cv2.imread('york.jpg')
+plt.imshow(Gray_image)
+plt.show()
+plt.imshow(Color_image)
+plt.show()
 ```
+# Histogram of Grayscale Image and Green channel of Color Image:
+```py
+hist = cv2.calcHist([Gray_image],[0],None,[256],[0,256])
+hist1 = cv2.calcHist([Color_image],[1],None,[256],[0,256])
+plt.figure()
+plt.title("Histogram")
+plt.xlabel('grayscale value')
+plt.ylabel('pixel count')
+plt.stem(hist)
+plt.show()
+plt.figure()
+plt.title("Histogram of Color Image Green Channel")
+plt.xlabel('Intensity value')
+plt.ylabel('pixel count')
+plt.stem(hist1)
+plt.show()
+```
+# Histogram Equalization of Grayscale Image:
+```py
+equ = cv2.equalizeHist(gray_image)
+cv2.imshow("Equalized Image",equ)
+```
+
+
+
+
+
 ## Output:
-### Input Grayscale Image and Color Image
+### Input Grayscale Image and Color Image:
+![image](https://github.com/MounishT/Histogram-of-an-images/assets/138955798/0c912e06-0885-4585-a037-7d1c34523a71)
+![image](https://github.com/MounishT/Histogram-of-an-images/assets/138955798/b5dda9e9-8696-497f-af6c-2f8fe5e49a9f)
 
 
 ### Histogram of Grayscale Image and any channel of Color Image
 
-
+![image](https://github.com/MounishT/Histogram-of-an-images/assets/138955798/1bbfcf7b-c7e6-44dc-913f-051443d857ca)
 
 ### Histogram Equalization of Grayscale Image.
 
+![image](https://github.com/MounishT/Histogram-of-an-images/assets/138955798/bf9aca40-9125-4b3e-9330-178b25288bc7)
 
 
 
