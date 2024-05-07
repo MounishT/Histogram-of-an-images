@@ -26,8 +26,8 @@ The Histogram of gray scale image and color image is shown.
 
 ## Program:
 
-# Developed By: Kanishka V S
-# Register Number: 212222230061
+# Developed By: T MOUNISH
+# Register Number: 21222223098
 # Input Grayscale Image and Color Image:
 ```py
 import cv2
